@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Comment Bang</string>
+    <key>scope</key>
+    <string>comment</string>
+    <key>settings</key>
+    <dict>
+        <key>showInSymbolList</key>
+        <integer>1</integer>
+        <key>symbolTransformation</key>
+        <string>
+        	s/^\S+\s*//g		# strip opening punctuation + spacing
+        	s/^[^!].*//g		# remove all comments that DON'T begin with a bang
+        	s/^(!\s*)/!     /g		# replace bang and subsequent spaces with [!] and one space
+        	s/(-{2,3}>|\*{1,}\/)$//g	# strip common comment endings: (HTML + CF, C-Style)
+        	s/^(.*?)\n.*/$1/g	# keep only 1st line (in case of multiline comment)
+        </string>
+        	<!-- s/^!\s*//g			# strip bang and subsequent spaces (if any) -->
+    </dict>
+    <key>uuid</key>
+    <string>7fdae8f0-c6c7-11e1-9b21-0800200c9a66</string>
+</dict>
+</plist>
