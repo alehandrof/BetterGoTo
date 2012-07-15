@@ -14,7 +14,8 @@
         <string>
         	s/^\S+\s*//g		# strip opening punctuation + spacing
         	s/^[^!].*//g		# remove all comments that DON'T begin with a bang
-        	s/^(!\s*)/!     /g		# replace bang and subsequent spaces with [!] and one space
+        	s/^(!-+).*/- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -/g		# replace bang with ruler (if applicable)
+        	s/^(!\s*)/! /g		# replace bang and subsequent spaces with [!] and one space
         	s/(-{2,3}>|\*{1,}\/)$//g	# strip common comment endings: (HTML + CF, C-Style)
         	s/^(.*?)\n.*/$1/g	# keep only 1st line (in case of multiline comment)
         </string>
