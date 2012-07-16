@@ -5,7 +5,7 @@
     <key>name</key>
     <string>Comment Bang</string>
     <key>scope</key>
-    <string>comment, source.css comment.block.css</string>
+    <string>comment, source.css comment.block.css, source.scss comment.block.scss</string>
     <key>settings</key>
     <dict>
         <key>showInSymbolList</key>
