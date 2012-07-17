@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>name</key>
-    <string>Comment Bang</string>
+    <string>Symbol List: Comment Bang</string>
     <key>scope</key>
     <string>comment, source.css comment.block.css, source.scss comment.block.scss</string>
     <key>settings</key>
@@ -15,10 +15,11 @@
         	s/^\S+\s*//g		# strip opening punctuation + spacing
         	s/^[^!].*//g		# remove all comments that DON'T begin with a bang
         	s/^(!-+).*/··································································/g		# replace bang with ruler (if applicable)
-        	s/^(!\s*)/! /g		# replace bang and subsequent spaces with [!] and one space
+        	s/^(!\s*)/!         /g		# replace bang and subsequent spaces with [!] and one space
         	s/(-{2,3}>|\*{1,}\/)$//g	# strip common comment endings: (HTML + CF, C-Style)
         	s/^(.*?)\n.*/$1/g	# keep only 1st line (in case of multiline comment)
         </string>
+        	<!-- s/^(!\s*)(.*)$/!\t$2/g      # reformat output -->
         	<!-- s/^!\s*//g			# strip bang and subsequent spaces (if any) -->
     </dict>
     <key>uuid</key>
