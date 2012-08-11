@@ -17,9 +17,9 @@
 			s/^\\section/  /g;				# Strip \section + add indent
 			s/^\\subsection/    /g;			# Strip \subsection + add indent
 			s/^\\subsubsection/      /g;	# Strip \subsubsection + add indent
-			s/^\\paragraph/        /g;	# Strip \paragraph + add indent
+			s/^\\paragraph/        /g;		# Strip \paragraph + add indent
 			s/^\\subparagraph/          /g;	# Strip \subparagraph + add indent
-			s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g;	# Keep indent, string and strip other markup
+			s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g;	# Keep indent and string; strip other markup
 		</string>
 			<!-- s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g; -->
 			<!-- s/\}\s*$//g; -->
