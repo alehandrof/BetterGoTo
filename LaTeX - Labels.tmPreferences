@@ -12,7 +12,7 @@
 		<integer>1</integer>
 		<key>symbolTransformation</key>
 		<string>
-		s/\\label\{([^\}]+)\}/        $1/g;
+		s/\\label\{([^\}]+)\}/            $1/g;
 		</string>
 	</dict>
 	<!-- <key>uuid</key>
