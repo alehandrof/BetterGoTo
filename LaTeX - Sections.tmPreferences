@@ -12,12 +12,15 @@
 		<integer>1</integer>
 		<key>symbolTransformation</key>
 		<string>
-			s/\\(?:part|chapter).*\{//g;		# TODO: Differentiate parts
-			s/^\\section.*\{/  /g;
-			s/^\\subsection.*\{/    /g;
-			s/^\\subsubsection.*\{/      /g;
-			s/\}\s*$//g;
+			s/^\\part(.*)/\U($1)/g;
+			s/^\\chapter//g;
+			s/^\\section/  /g;
+			s/^\\subsection/    /g;
+			s/^\\subsubsection/      /g;
+			s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g;
 		</string>
+			<!-- s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g; -->
+			<!-- s/\}\s*$//g; -->
 			<!-- s/\\sub/  \\/g; -->
 			<!-- s/\\(?:sub)*(.)(?:ection|hapter)\{([^\}]+)\}/\u$1 $2/g; -->
 	</dict>
