@@ -12,13 +12,13 @@
 		<integer>1</integer>
 		<key>symbolTransformation</key>
 		<string>
-			s/^\\part(.*)/\U($1)/g;			# Strip \part and make rest of string uppercase
-			s/^\\chapter//g;				# Strip \chapter
-			s/^\\section/  /g;				# Strip \section + add indent
-			s/^\\subsection/    /g;			# Strip \subsection + add indent
-			s/^\\subsubsection/      /g;	# Strip \subsubsection + add indent
-			s/^\\paragraph/        /g;		# Strip \paragraph + add indent
-			s/^\\subparagraph/          /g;	# Strip \subparagraph + add indent
+			s/^\\part(.*)/\U($1)/g;				# Strip \part and make rest of string uppercase
+			s/^\\chapter//g;					# Strip \chapter
+			s/^\\section/  /g;					# Strip \section + add indent
+			s/^\\subsection/    /g;				# Strip \subsection + add indent
+			s/^\\subsubsection/      /g;		# Strip \subsubsection + add indent
+			s/^\\paragraph/        /g;			# Strip \paragraph + add indent
+			s/^\\subparagraph/          /g;		# Strip \subparagraph + add indent
 			s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g;	# Keep indent and string; strip other markup
 		</string>
 			<!-- s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g; -->
