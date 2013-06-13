@@ -21,10 +21,6 @@
 			s/^\\subparagraph/          /g;		# Strip \subparagraph + add indent
 			s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g;	# Keep indent and string; strip other markup
 		</string>
-			<!-- s/^(\s*)\*{0,1}\{(.*)\}\s*/$1$2/g; -->
-			<!-- s/\}\s*$//g; -->
-			<!-- s/\\sub/  \\/g; -->
-			<!-- s/\\(?:sub)*(.)(?:ection|hapter)\{([^\}]+)\}/\u$1 $2/g; -->
 	</dict>
 </dict>
 </plist>
