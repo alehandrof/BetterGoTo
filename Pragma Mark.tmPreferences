@@ -3,17 +3,18 @@
 <plist version="1.0">
 	<dict>
 		<key>name</key>
-		<string>Symbol List: Comment Bang</string>
+		<string>Symbol List: Pragma Mark</string>
 		<key>scope</key>
-		<string>meta.toc-list.pragma-mark.c</string>
+		<string>comment</string>
 		<key>settings</key>
 		<dict>
 			<key>showInSymbolList</key>
 			<integer>1</integer>
 			<key>symbolTransformation</key>
 			<string>
-				s/^#pragma mark\s//g	# strip `#pragma mark`
-				s/^-$/------------------------------------------------------------------------------------------/g	# extend `-` to make a sort of ruler
+				s/^[^#pragma mark].*//g		# remove all comments that DON'T begin with `#pragma mark`
+				s/^#pragma mark\s//g		# strip `#pragma mark` from beginning of comment
+				s/^#pragma mark -\s*$/··································································/g		# replace `-` with middots to make a ruler
 			</string>
 		</dict>
 		<key>uuid</key>
