@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>name</key>
+		<string>Symbol List: Comment Bang</string>
+		<key>scope</key>
+		<string>meta.toc-list.pragma-mark.c</string>
+		<key>settings</key>
+		<dict>
+			<key>showInSymbolList</key>
+			<integer>1</integer>
+			<key>symbolTransformation</key>
+			<string>
+				s/^#pragma mark\s//g	# strip `#pragma mark`
+				s/^-$/------------------------------------------------------------------------------------------/g	# extend `-` to make a sort of ruler
+			</string>
+		</dict>
+		<key>uuid</key>
+		<string>1377f13b-b33e-400f-85d6-13f37fe0469b</string>
+	</dict>
+</plist>
