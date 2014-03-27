@@ -12,9 +12,11 @@
 			<integer>1</integer>
 			<key>symbolTransformation</key>
 			<string>
-				s/^[^#pragma mark].*//g		# remove all comments that DON'T begin with `#pragma mark`
-				s/^#pragma mark\s//g		# strip `#pragma mark` from beginning of comment
-				s/^#pragma mark -\s*$/··································································/g		# replace `-` with middots to make a ruler
+				s/^\s*\S+?\s*?pragma mark\s*/\{\_KEEP THIS\_\}/g		# relpace opening punctuation and "pragma mark" with a placeholder (`{_KEEP THIS_}`)
+				s/^[^\{\_KEEP THIS\_\}].*//g		# remove all comments that DON'T begin with the placeholder
+				s/(-{2,3}>|\*{1,}\/)\s*$//g	# strip common comment endings: (HTML + CF, C-Style) + spacing
+				s/^\{\_KEEP THIS\_\}//g		# strip placeholder from beginning of comment
+				s/^-+\s*$/··································································/g		# replace `-` with middots to make a ruler
 			</string>
 		</dict>
 		<key>uuid</key>
